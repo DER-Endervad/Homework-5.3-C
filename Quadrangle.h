@@ -45,5 +45,28 @@ public:
 		std::cout << "Стороны: a=" << length_a << " b=" << length_b << " c=" << length_c << " d=" << length_d << std::endl;
 		std::cout << "Углы: A=" << angel_a << " B=" << angel_b << " C=" << angel_c << " D=" << angel_d << std::endl;
 	}
+
+	void print_info() override {
+		std::cout << name << ": " << std::endl;
+		if (check()) {
+			std::cout << "Правильная" << std::endl;
+		}
+		else
+		{
+			std::cout << "Неправильная" << std::endl;
+		}
+		std::cout << "Количество сторон: " << sides_count << std::endl;
+		std::cout << "Стороны: a=" << length_a << " b=" << length_b << " c=" << length_c << " d=" << length_d << std::endl;
+		std::cout << "Углы: A=" << angel_a << " B=" << angel_b << " C=" << angel_c << " D=" << angel_d << std::endl;
+	}
+
+	bool check() override {
+		if (sides_count == 4 && (angel_a + angel_b + angel_c + angel_d) == 360) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 };
 

@@ -12,8 +12,26 @@ public:
 		name = "Фигура";
 	}
 
-	void get_sides_count() {
-		std::cout << name << ": " << sides_count << std::endl;
+	virtual void print_info() {
+		std::cout << name << ": " << std::endl;
+		if (check()) {
+			std::cout << "Правильная" << std::endl;
+		}
+		else
+		{
+			std::cout << "Неправильная" << std::endl;
+		}
+		std::cout << "Количество сторон: " << sides_count << std::endl;
 	};
+
+	virtual bool check() {
+		if (sides_count == 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
 };
 
