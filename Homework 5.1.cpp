@@ -18,35 +18,35 @@ int main()
     SetConsoleOutputCP(1251);
 
     Figure* f = new Figure(); // Фигура
-    f->print_info(); std::cout << std::endl;
+    f->print_info(); std::cout << std::endl; delete f;
 
     Figure* t = new Triangle(10, 20, 30, 50, 60, 70); // Треугольник
-    t->print_info(); std::cout << std::endl;
+    t->print_info(); std::cout << std::endl; delete t;
 
     Figure* rt = new Right_triangle(10, 20, 30, 50, 60, 90); // Прямоугольный треугольник
-    rt->print_info(); std::cout << std::endl;
+    rt->print_info(); std::cout << std::endl; delete rt;
 
     Figure* rt2 = new Right_triangle(10, 20, 30, 50, 40, 90); // Прямоугольный треугольник 2
-    rt2->print_info(); std::cout << std::endl;
+    rt2->print_info(); std::cout << std::endl; delete rt2;
 
     Figure* it = new Isosceles_triangle(10, 20, 10, 50, 60, 50); // Равнобедренный треугольник
-    it->print_info(); std::cout << std::endl;
+    it->print_info(); std::cout << std::endl; delete it;
 
     Figure* et = new Equilateral_triangle(30, 30, 30, 60, 60, 60); // Равносторонний треугольник
-    et->print_info(); std::cout << std::endl;
+    et->print_info(); std::cout << std::endl; delete et;
 
     Figure* q = new Quadrangle(10, 20, 30, 40, 50, 60, 70, 80); // Четырёхугольник
-    q->print_info(); std::cout << std::endl;
+    q->print_info(); std::cout << std::endl; delete q;
 
     Figure* r = new Rectangle_Q(10, 20, 10, 20, 90, 90, 90, 90); // Прямоугольник
-    r->print_info(); std::cout << std::endl;
+    r->print_info(); std::cout << std::endl; delete r;
 
     Figure* s = new Square(20, 20, 20, 20, 90, 90, 90, 90); // Квадрат
-    s->print_info(); std::cout << std::endl;
+    s->print_info(); std::cout << std::endl; delete s;
 
     Figure* p = new Parallelogram(20, 30, 20, 30, 30, 40, 30, 40); // Параллелограмм
-    p->print_info(); std::cout << std::endl;
+    p->print_info(); std::cout << std::endl; delete p;
 
     Figure* rh = new Rhombus(30, 30, 30, 30, 30, 40, 30, 40); // Ромб
-    rh->print_info(); std::cout << std::endl;
+    rh->print_info(); std::cout << std::endl; delete rh;
 }
